@@ -2,12 +2,17 @@
 import { onMounted, ref } from 'vue'
 import Test from './Test'
 import { useStore } from '@/store'
+import { getLoginInfo } from '@/api/common'
 
 const store = useStore()
 defineProps<{ msg: string }>()
 
 const title = ref<HTMLHeadElement | null>(null)
-onMounted(() => {})
+onMounted(() => {
+  getLoginInfo().then(res => {
+    console.log(res, 'res')
+  })
+})
 </script>
 
 <template>
