@@ -19,5 +19,12 @@ export default defineConfig({
     eslintPlugin({
       cache: false
     })
-  ]
+  ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "@/style/variables.scss";'
+      }
+    }
+  }
 })

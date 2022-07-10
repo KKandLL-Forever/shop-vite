@@ -14,11 +14,16 @@ onMounted(() => {})
   <h1 ref="title">
     {{ msg }}
   </h1>
-  <h2>{{ store.counter }}</h2>
+  <h2 class="testH2">
+    {{ store.counter }}
+  </h2>
   <Test :data="'xxxxxxxxxx'" />
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+.testH2 {
+  color: $color;
+}
 a {
   color: #42b983;
 }
