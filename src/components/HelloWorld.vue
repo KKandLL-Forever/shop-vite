@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import Test from './Test'
+import { useStore } from '@/store'
 
+const store = useStore()
 defineProps<{ msg: string }>()
 
 const title = ref<HTMLHeadElement | null>(null)
@@ -12,6 +14,7 @@ onMounted(() => {})
   <h1 ref="title">
     {{ msg }}
   </h1>
+  <h2>{{ store.counter }}</h2>
   <Test :data="'xxxxxxxxxx'" />
 </template>
 
