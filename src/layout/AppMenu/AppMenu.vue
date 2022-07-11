@@ -5,9 +5,9 @@ import {
   Location,
   Setting
 } from '@element-plus/icons-vue'
-import { ref } from 'vue'
+import { useStore } from '@/store'
 
-const isCollapse = ref(false)
+const store = useStore()
 
 </script>
 
@@ -17,7 +17,7 @@ const isCollapse = ref(false)
     active-text-color="#ffd04b"
     background-color="#304057"
     text-color="#fff"
-    :collapse="isCollapse"
+    :collapse="store.isCollapse"
     router
     unique-opened
   >
@@ -59,7 +59,7 @@ const isCollapse = ref(false)
         <span>订单列表</span>
       </el-menu-item>
     </el-sub-menu>
-    <el-menu-item>
+    <el-menu-item index="media">
       <template #title>
         <el-icon><setting /></el-icon>
         <span>媒体</span>
@@ -96,7 +96,7 @@ const isCollapse = ref(false)
 .el-menu {
   border-right: none;
 }
-.el-menu:not(.el-menu--collapse) {
+.el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 200px;
   min-height: 400px;
 }

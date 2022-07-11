@@ -6,7 +6,13 @@ export const useStore = defineStore('main', {
   state: () => {
     return {
       // 所有这些属性都将自动推断出它们的类型
-      counter: 100
+      counter: 100,
+      isCollapse: false
+    }
+  },
+  actions: {
+    changeCollapse () {
+      this.isCollapse = !this.isCollapse
     }
   }
 })
