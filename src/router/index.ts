@@ -12,7 +12,10 @@ const routes: RouteRecordRaw[] = [
       {
         path: '', // 默认子路由
         name: 'home',
-        component: () => import('../views/home/Home.vue')
+        component: () => import('../views/home/Home.vue'),
+        meta: {
+          title: '首页'
+        }
       },
       ...productRoutes,
       ...orderRoutes,
