@@ -3,8 +3,9 @@
 </script>
 
 <template>
-  <router-view />
+  <div>perimission Role</div>
 </template>
 
-<style>
+<style scoped>
+
 </style>

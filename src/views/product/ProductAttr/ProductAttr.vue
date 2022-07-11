@@ -3,8 +3,9 @@
 </script>
 
 <template>
-  <router-view />
+  <div>Product attr</div>
 </template>
 
-<style>
+<style scoped>
+
 </style>

@@ -3,8 +3,9 @@
 </script>
 
 <template>
-  <router-view />
+  <div>perimission Rule</div>
 </template>
 
-<style>
+<style scoped>
+
 </style>

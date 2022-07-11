@@ -3,8 +3,9 @@
 </script>
 
 <template>
-  <router-view />
+  <div>order offline</div>
 </template>
 
-<style>
+<style scoped>
+
 </style>

@@ -18,7 +18,7 @@ module.exports = {
   ],
   rules: {
     'vue/multi-word-component-names': ['error', {
-      ignores: ['index']
+      ignores: ['index', 'Product', 'Home', 'Login', 'Admin', 'Role', 'Rule']
     }]
   }
 }

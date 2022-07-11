@@ -3,8 +3,9 @@
 </script>
 
 <template>
-  <router-view />
+  <div>product reply</div>
 </template>
 
-<style>
+<style scoped>
+
 </style>
