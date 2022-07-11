@@ -23,7 +23,19 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: '@import "@/style/variables.scss";'
+        additionalData: '@use "@/style/element/custom-var.scss" as *;'
+      }
+    }
+  },
+  server: {
+    host: 'localhost',
+    proxy: {
+      '/dev': {
+        target: 'https://shop.fed.lagounews.com',
+        changeOrigin: true,
+        rewrite: (path): string => {
+          return path.replace(/^\/dev/, '/api/admin')
+        }
       }
     }
   }

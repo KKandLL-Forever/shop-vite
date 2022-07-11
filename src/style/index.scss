@@ -1,4 +1,5 @@
-@import './variables.scss';
+// 自定义变量写在@style/element/custom-var.scss
+//@use './variables.scss' as v;
 @import './mixin.scss';
 @import './transition.scss';
 @import './common.scss';

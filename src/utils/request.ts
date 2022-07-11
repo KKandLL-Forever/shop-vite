@@ -4,7 +4,7 @@ import axios, { AxiosRequestConfig } from 'axios'
 // import router from '@/router/'
 
 const request = axios.create({
-  baseURL: import.meta.env.VITE_API_BASEURL
+  // baseURL: import.meta.env.VITE_API_BASEURL
 })
 
 // 请求拦截器

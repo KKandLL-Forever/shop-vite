@@ -3,6 +3,7 @@ import { onMounted, ref } from 'vue'
 import Test from './Test'
 import { useStore } from '@/store'
 import { getLoginInfo } from '@/api/common'
+import { isDark, toggleDark } from '@/composable'
 
 const store = useStore()
 defineProps<{ msg: string }>()
@@ -23,14 +24,14 @@ onMounted(() => {
     {{ store.counter }}
   </h2>
   <Test :data="'xxxxxxxxxx'" />
+  <el-button @click="toggleDark()">
+    切换 当前{{ isDark ? 'Dark' : 'Light' }}
+  </el-button>
 </template>
 
 <style lang="scss" scoped>
 .testH2 {
   color: $color;
-}
-a {
-  color: #42b983;
 }
 
 label {
@@ -42,6 +43,5 @@ code {
   background-color: #eee;
   padding: 2px 4px;
   border-radius: 4px;
-  color: #304455;
 }
 </style>
