@@ -7,6 +7,8 @@ import { Notification } from '@element-plus/icons-vue'
   <el-icon><Notification /></el-icon>
 </template>
 
-<style scoped>
-
+<style lang="scss" scoped>
+.el-icon {
+  cursor: pointer;
+}
 </style>

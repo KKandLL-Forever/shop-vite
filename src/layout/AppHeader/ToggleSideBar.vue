@@ -14,6 +14,8 @@ const switchTo = () => {
   </el-icon>
 </template>
 
-<style scoped>
-
+<style lang="scss" scoped>
+.el-icon {
+  cursor: pointer;
+}
 </style>
