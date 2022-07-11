@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import Test from './Test'
 import { useStore } from '@/store'
+import Test from './Test'
 import { getLoginInfo } from '@/api/common'
 import { isDark, toggleDark } from '@/composable'
 
@@ -9,6 +9,8 @@ const store = useStore()
 defineProps<{ msg: string }>()
 
 const title = ref<HTMLHeadElement | null>(null)
+
+const value1 = ref(null)
 onMounted(() => {
   getLoginInfo().then(res => {
     console.log(res, 'res')
@@ -27,6 +29,12 @@ onMounted(() => {
   <el-button @click="toggleDark()">
     切换 当前{{ isDark ? 'Dark' : 'Light' }}
   </el-button>
+  <el-date-picker
+    v-model="value1"
+    type="week"
+    format="[Week] ww"
+    placeholder="Pick a week"
+  />
 </template>
 
 <style lang="scss" scoped>
