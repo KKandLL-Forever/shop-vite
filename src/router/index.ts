@@ -3,6 +3,8 @@ import AppLayout from '@/layout/AppLayout.vue'
 import { productRoutes } from './modules/product'
 import { orderRoutes } from './modules/order'
 import { permissionRoutes } from './modules/permission'
+import nprogress from 'nprogress'
+import 'nprogress/nprogress.css'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -34,4 +36,10 @@ const router = createRouter({
   routes
 })
 
+router.beforeEach(() => {
+  nprogress.start()
+})
+router.afterEach(() => {
+  nprogress.done()
+})
 export default router
