@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import AppMenu from './AppMenu/AppMenu.vue'
+import AppHeader from './AppHeader/AppHeader.vue'
 </script>
 
 <template>
@@ -9,7 +10,9 @@ import AppMenu from './AppMenu/AppMenu.vue'
         <AppMenu />
       </el-aside>
       <el-container>
-        <el-header>Header</el-header>
+        <el-header>
+          <AppHeader />
+        </el-header>
         <el-main>
           <!--children routes-->
           <router-view />
